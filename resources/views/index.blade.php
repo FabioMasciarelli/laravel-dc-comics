@@ -18,7 +18,10 @@
                     <th scope="row">{{ $comic->title }}</th>
                     <td>{{ $comic->series }}</td>
                     <td>{{ $comic->type }}</td>
-                    <td><a href="{{ route('comics.show', $comic->id) }}" class="card-link">Scopri di più</a></td>
+                    <td>
+                        <a href="{{ route('comics.show', $comic->id) }}" class="card-link">Scopri di più</a>
+                        <a href="{{ route('comics.create') }}" class="card-link">Aggiungi</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
