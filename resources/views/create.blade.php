@@ -2,7 +2,7 @@
 
 @section('content')
     <h2>Inserisci nuovo fumetto</h2>
-    <form action="{{ route('comics.create') }}" method="POST">
+    <form action="{{ route('comics.store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="title">Titolo</label>
@@ -19,6 +19,10 @@
         <div class="mb-3">
             <label for="price">Prezzo</label>
             <input type="input" class="form-control" id="price" name="price">
+        </div>
+        <div class="mb-3">
+            <label for="series">Serie</label>
+            <input type="input" class="form-control" id="series" name="series">
         </div>
         <div class="mb-3">
             <label for="sale_date">Data di uscita</label>
